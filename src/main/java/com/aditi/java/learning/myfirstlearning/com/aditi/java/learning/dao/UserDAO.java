@@ -17,20 +17,19 @@ public class UserDAO {
 
         //TODO: To be implemented - realtime database integration
 
-        User user = new User();
-        user.setFirstName("Aditi");
-        user.setLastName("Priya");
-        user.setPhoneNumber("4204404201");
+        return User.builder()
+                .firstName("Aditi")
+                .lastName("Priya")
+                .phoneNumber("1231231231")
+                .address(Address.builder()
+                        .adress1("4894 Bernal Ave")
+                        .adress2("Apt L")
+                        .city("Pleasanton")
+                        .state("CA")
+                        .zip("94566")
+                        .build())
+                .build();
 
-        Address address = new Address();
-        address.setAdress1("4894 Bernal Ave");
-        address.setAdress2("Aptl");
-        address.setCity("Pleasanton");
-        address.setState("CA");
-        address.setZip("94566");
-        user.setAddress(address);
-
-        return user;
     }
 
 }
