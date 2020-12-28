@@ -22,7 +22,6 @@ public class FirstController {
             @RequestParam(value = "int1") Integer firstInt,
             @RequestParam(value = "int2") Integer secondInt
     ){
-        //Log.("Request came");
         log.info("Request came to sum {} and {}", firstInt, secondInt);
         Integer result = firstService.sum(firstInt, secondInt);
         log.info("result is {}", result);
